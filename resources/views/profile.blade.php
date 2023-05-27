@@ -52,7 +52,7 @@
                 <i class="fas fa-gem" style="margin-left: 15px;"></i><b class="theme" style="margin-right: 50px;">Спорт</b>
                 {{ $answer->created_at->format('d/m/Y') }}<i class="fas fa-eye" style="margin-left: 20px;"></i> 250
                 <hr>
-                <h5 class="mb-3">{{ $answer->answer }}<h5>
+                <p class="mb-3">{{ $answer->answer }}<p>
                         <div class="btn-group" role="group" style="margin-bottom: 10px;">
                             <form action="{{ route('answers-like', $answer->id) }}" method="POST" style="margin-right: 10px;">
                                 @csrf
