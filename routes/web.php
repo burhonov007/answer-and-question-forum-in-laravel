@@ -6,6 +6,9 @@ Auth::routes();
 Route::get('/', 'QuestionController@index')->name('home');
 Route::get('/profile', 'UserController@index')->name('profile');
 Route::get('/logout', 'UserController@logout')->name('logout');
+Route::get('/become-an-expert','UserController@becomeExpert')->name('become-an-expert');
+Route::post('/user/become-an-expert','UserController@storeToBecomeExpert')->name('store-to-become-expert');
+
 
 Route::get('/questions/add-question','QuestionController@create')->name('add-question');
 Route::post('/questions/store-question','QuestionController@store')->name('store-question');

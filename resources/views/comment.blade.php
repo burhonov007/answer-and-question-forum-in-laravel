@@ -1,8 +1,11 @@
 @extends('layouts.super')
 @section('content')
+    <div>
+        <a href="{{ route('show-question', $answer->question->id) }}" class="btn btn-outline-primary"></i>Ба кафо</a>
+    </div>
     <div class="card mx-auto mt-4">
         <div class="card__body">
-            @include('inc.answer-creator')
+            @include('inc.commented-answer-creator')
         </div>
     </div>
 

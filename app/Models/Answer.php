@@ -43,4 +43,14 @@ class Answer extends Model
     {
         return $this->comments()->count();
     }
+
+    public function likeByUser($userId)
+    {
+        return $this->likes()->where('user_id', $userId)->exists();
+    }
+
+    public function dislikeByUser($userId)
+    {
+        return $this->dislikes()->where('user_id', $userId)->exists();
+    }
 }

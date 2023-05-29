@@ -7,6 +7,11 @@
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <style>
+
+        body{
+            background-color: #fff;
+        }
+
         a{
             text-decoration: none;
         }
@@ -80,9 +85,7 @@
         }
 
         .card__body {
-
             margin: 0 10px;
-
         }
 
         .rounded-circle-avatar {
@@ -104,38 +107,35 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3 left-block">
+        <div class="col-12 col-md-3 left-block">
             <div class="fixed-links">
-                <a href="{{ route('home') }}"><img class="logo" src="{{ asset('./assets/logo.svg') }}"
-                                                   alt="Логотип"></a>
+                <a href="{{ route('home') }}"><img class="logo" src="{{ asset('./assets/logo.svg') }}" alt="Логотип"></a>
                 <ul class="list-unstyled mt-4">
-                    @if(Auth::guest())
+                @if(Auth::guest())
+                    <!-- Меню для гостей -->
                         <li class="mb-1"><a href="{{ route('home') }}"><i class="fas fa-question"></i> Вопросы</a></li>
-                        <li class="mb-1"><a href="{{ route('add-question') }}"> <i class="fas fa-question-circle"></i>
-                                Задать вопрос</a></li>
+                        <li class="mb-1"><a href="{{ route('add-question') }}"> <i class="fas fa-question-circle"></i> Задать вопрос</a></li>
                         <li class="mb-1"><a href="#"><i class="fas fa-users"></i> Темы сообщества</a></li>
                         <li class="mb-1"><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Вход</a></li>
-                        <li class="mb-1"><a href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Регистрация</a>
-                        </li>
-                    @else
+                        <li class="mb-1"><a href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                @else
+                    <!-- Меню для авторизованных пользователей -->
                         <li class="mb-1"><a href="{{ route('home') }}"><i class="fa fa-home"></i> Главная</a></li>
                         <li class="mb-1"><a href="{{ route('profile') }}"><i class="fa fa-user"></i> Профиль</a></li>
-                        <li class="mb-1"><a href="{{ route('add-question') }}"> <i class="fas fa-question-circle"></i>
-                                Задать вопрос</a></li>
+                        <li class="mb-1"><a href="{{ route('add-question') }}"> <i class="fas fa-question-circle"></i> Задать вопрос</a></li>
                         <li class="mb-1"><a href="#"><i class="fa fa-envelope"></i> Сообщения</a></li>
                         <li class="mb-1"><a href="#"><i class="fa fa-bell"></i> Уведомления</a></li>
                         <li class="mb-1"><a href="#"><i class="fa fa-cog"></i> Настройки</a></li>
                         <li class="mb-1"><a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Выйти</a></li>
 
                         @if(Auth::user()->role != 'expert')
-                            <li class="mb-1"><a href="{{ route('logout') }}"><i class="fa fa-gem"></i><b class="theme">
-                                        Стать экспертом</b></a></li>
+                            <li class="mb-1"><a href="{{ route('become-an-expert') }}"><i class="fa fa-gem"></i><b class="theme">Стать экспертом</b></a></li>
                         @endif
                     @endif
                 </ul>
             </div>
         </div>
-        <div class="col-9 right-block">
+        <div class="col-12 col-md-9 right-block">
             @yield('content')
         </div>
     </div>

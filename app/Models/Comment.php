@@ -33,4 +33,14 @@ class Comment extends Model
     {
         return $this->dislikes()->count();
     }
+
+    public function likeByUser($userId)
+    {
+        return $this->likes()->where('user_id', $userId)->exists();
+    }
+
+    public function dislikeByUser($userId)
+    {
+        return $this->dislikes()->where('user_id', $userId)->exists();
+    }
 }

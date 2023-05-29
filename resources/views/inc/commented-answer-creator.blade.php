@@ -1,4 +1,3 @@
-
 <img src="{{ asset('./assets/avatar.svg') }}" style="margin-right: 15px;"
      class="rounded-circle-avatar" alt="Аватар">Чавоб дод    <b>{{ $answer->user->name }}</b>
 @if($answer->user->role == 'user')
