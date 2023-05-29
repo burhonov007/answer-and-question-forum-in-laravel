@@ -15,10 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('answer_id');
             $table->unsignedBigInteger('user_id');
-            $table->integer('likes')->default(0);
             $table->timestamps();
-
-            // Add foreign key constraint
             $table->foreign('answer_id')->references('id')->on('answers')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 

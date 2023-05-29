@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('contact')->nullable();
             $table->string('theme')->nullable();
             $table->string('short_description')->nullable();
+            $table->integer('status')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

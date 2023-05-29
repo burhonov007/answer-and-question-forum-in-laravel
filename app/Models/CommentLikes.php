@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dislike extends Model
+class CommentLikes extends Model
 {
     use HasFactory;
-    protected $fillable = ['answer_id','user_id'];
-    public function user()
+    protected $fillable = ['comment_id', 'user_id'];
+    public function comment()
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(Comment::class);
     }
 }

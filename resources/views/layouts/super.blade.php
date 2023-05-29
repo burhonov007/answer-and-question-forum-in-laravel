@@ -86,16 +86,16 @@
         }
 
         .rounded-circle-avatar {
-            max-width: 7%;
+            max-width: 4%;
         }
 
         .rounded-circle {
-            max-width: 3%;
+            max-width: 1%;
         }
 
         .fa-gem,
         .theme {
-            color: green;
+            color: black;
         }
 
     </style>

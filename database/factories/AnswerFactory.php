@@ -22,6 +22,8 @@ class AnswerFactory extends Factory
             'user_id' => User::inRandomOrder()->first()->id,
             'question_id' => Question::inRandomOrder()->first()->id,
             'answer' => fake()->paragraph(20),
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
         ];
     }
 }

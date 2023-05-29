@@ -23,6 +23,8 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => '12345678', // password
             'remember_token' => Str::random(10),
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
         ];
     }
 

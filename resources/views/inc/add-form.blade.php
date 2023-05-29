@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="col-md-8">
-            @include('sessionMessages')
+            @include('inc.messages.sessionMessages')
             <form method="POST" action="{{ route('store-question') }}">
                 @csrf
                 <ul class="list-group">
@@ -14,7 +14,7 @@
                         </div>
                         <div class="form-group">
                             <label for="pwd">Тафсилоти савол</label>
-                            <textarea class="form-control" rows="8" id="question" name="question">{{old('question')}}</textarea>
+                            <textarea class="form-control" rows="8" id="question" name="question">{{old('question.blade.php')}}</textarea>
                         </div>
                             <button type="submit" class="btn btn-primary pull-right">Пешниҳод кунед</button>
 

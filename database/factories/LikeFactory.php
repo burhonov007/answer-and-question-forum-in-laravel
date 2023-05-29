@@ -22,7 +22,8 @@ class LikeFactory extends Factory
         return [
             'answer_id' => Answer::inRandomOrder()->first()->id,
             'user_id' => User::inRandomOrder()->first()->id,
-            'likes' => 1,
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),
         ];
     }
 }

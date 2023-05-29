@@ -5,30 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class Comment extends Model
 {
     use HasFactory;
-    protected $fillable = ['answer', 'question_id', 'user_id'];
 
+    protected $fillable = [
+        'comment','user_id','answer_id'
+    ];
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-    public function question()
-    {
-        return $this->belongsTo(Question::class);
-    }
     public function likes()
     {
-        return $this->hasMany(Like::class);
+        return $this->hasMany(CommentLikes::class);
     }
     public function dislikes()
     {
-        return $this->hasMany(Dislike::class);
+        return $this->hasMany(CommentDislikes::class);
     }
     // methods
     public function likeCount()
@@ -38,9 +32,5 @@ class Answer extends Model
     public function dislikeCount()
     {
         return $this->dislikes()->count();
-    }
-    public function commentCount()
-    {
-        return $this->comments()->count();
     }
 }

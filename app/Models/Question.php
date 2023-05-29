@@ -10,17 +10,10 @@ use App\Models\Answer;
 class Question extends Model
 {
     use HasFactory;
-
     public function answers()
     {
         return $this->hasMany(Answer::class);
     }
-
-//    public function comments()
-//    {
-//        return $this->hasMany(QuestionComment::class);
-//    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
