@@ -7,7 +7,7 @@
             @csrf
             <input hidden type="text" value="{{$question->id}}"  class="form-control"  name="question_id">
             <textarea name="answer" rows="2" class="form-control border-4"></textarea>
-            <button type="submit" class="btn btn-primary mt-3">Чавоб</button>
+            <button type="submit" class="btn btn-outline-primary mt-3">Чавоб</button>
         </form>
     @endif
 </div>

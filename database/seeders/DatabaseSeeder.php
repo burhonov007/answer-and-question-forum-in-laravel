@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         Answer::factory(200)->create();
         Like::factory(1500)->create();
         Dislike::factory(1500)->create();
-        Comment::factory(5000)->create();
+        Comment::factory(3000)->create();
         CommentLikes::factory(2500)->create();
         CommentDislikes::factory(2500)->create();
 

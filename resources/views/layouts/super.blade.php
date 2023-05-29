@@ -9,7 +9,7 @@
     <style>
 
         body{
-            background-color: #fff;
+            background-color: #B1B2FF;
         }
 
         a{
@@ -22,7 +22,7 @@
 
         a:hover {
             text-decoration: none;
-            color: silver;
+            color: white;
         }
 
         .left-block {
@@ -71,7 +71,7 @@
 
         .card {
             border-radius: 15px;
-            background-color: #fff;
+            background-color: #AAC4FF;
             padding: 20px;
         }
 
@@ -101,6 +101,9 @@
             color: black;
         }
 
+        .list-group-item{
+           background-color: #AAC4FF;
+        }
     </style>
 </head>
 

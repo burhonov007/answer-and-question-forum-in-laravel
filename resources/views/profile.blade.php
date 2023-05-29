@@ -1,7 +1,6 @@
 @extends('layouts.super')
 @section('content')
     {{--  profile  --}}
-
     <div class="card mx-auto">
         <div class="row">
             <div class="col-2">
@@ -17,19 +16,17 @@
                         <i class="fas fa-gem"></i><b class="theme" style="margin-right: 50px;">
                             @endif
                             <a> {{ $user->theme }}</a>
-
+                    </b>
                 <p>{{ $user->short_description }}</p>
                 <a href="#">{{ $user->contact }} </a>
             </div>
         </div>
     </div>
-
 {{--  biography  --}}
     @if(Auth::user()->role == 'expert')
         <div class="card mx-auto mt-4">
             <div class="card__body">
                 <p class="card-text">{{ $user->biography }}</p>
-                <button class="btn btn-info"><i class="fas fa-bolt"></i> 500</button>
                 <hr>
                 <h5>Таҷрибаи корӣ</h5>
                 <i class="fas fa-briefcase"></i> {{ $user->work_experience }}
@@ -40,12 +37,10 @@
                 <h5>Тамос</h5>
                 <i class="fas fa-link"></i> <a href="#">{{ $user->contact }}</a>
                 <hr>
-                <p><b>{{ $answerCount }}</b> ҷавоб <b>8</b> паём <b>{{ $user->followers }}</b> подписчик</p>
+                <p><b>{{ $answerCount }}</b> ҷавоб</p>
             </div>
         </div>
     @endif
-
-
     <div class="mx-auto mt-4 text-start text-uppercase"><h5><b>Чавобхои шумо</b></h5></div>
     @include('inc.messages.infoMessages')
     @if($answerCount    != 0)
@@ -56,9 +51,6 @@
                 @include('inc.answer-btn-group')
             </div>
         </div>
-
-
-
     @endforeach
     <div class="mt-3">
         {{ $answers->links() }}
