@@ -64,7 +64,7 @@ After completing these steps, your Laravel project should be successfully config
 ### Login credentials
 
 **Expert:**  *daniel@gmail.com*  
-**Password:** *secret*
+**Password:** *12345678*
 
 **User:** *james@gmail.com*  
-**Password:** *secret*
+**Password:** *12345678*
