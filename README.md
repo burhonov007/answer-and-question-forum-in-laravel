@@ -10,7 +10,7 @@ If you want to run this application for yourself, then follow these steps:
 
 1. Install the project's dependencies: run the `composer install` command on the command line. This will install all required Laravel dependencies.
 
-```
+```ruby
 composer install
 ```
 
@@ -23,7 +23,7 @@ composer install
 
 
 
-```shell
+```ruby
 php artisan key:generate
 ```
 
