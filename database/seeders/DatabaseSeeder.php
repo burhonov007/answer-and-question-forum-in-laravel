@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'James Cameron',
-            'email' => 'user@gmail.com',
+            'email' => 'james@gmail.com',
             'email_verified_at' => now(),
             'password' => '12345678', // password
             'remember_token' => Str::random(10),
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Daniel Anderson',
-            'email' => 'user@gmail.com',
+            'email' => 'daniel@gmail.com',
             'email_verified_at' => now(),
             'password' => '12345678',
             'role' => 'expert',

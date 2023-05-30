@@ -61,10 +61,10 @@ php artisan serve
 After completing these steps, your Laravel project should be successfully configured and ready to go. You can open its web interface by going to `http://localhost:8000` (or another port if you have changed it).
 
 
-### Demo Credentials
+### Login credentials
 
-**Admin:**  *admin@admin.com*  
+**Expert:**  *daniel@gmail.com*  
 **Password:** *secret*
 
-**User:** *user@user.com*  
+**User:** *james@gmail.com*  
 **Password:** *secret*
