@@ -23,7 +23,7 @@ composer install
 
 
 
-```ruby
+```shell
 php artisan key:generate
 ```
 
