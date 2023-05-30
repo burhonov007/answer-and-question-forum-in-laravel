@@ -53,4 +53,9 @@ class Answer extends Model
     {
         return $this->dislikes()->where('user_id', $userId)->exists();
     }
+
+    public function commentByUser($userId)
+    {
+        return $this->comments()->where('user_id', $userId)->exists();
+    }
 }

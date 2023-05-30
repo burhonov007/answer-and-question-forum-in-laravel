@@ -18,7 +18,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role')->default('user');
-            $table->integer('followers')->default(0);
             $table->text('biography')->nullable();
             $table->string('work_experience')->nullable();
             $table->string('study_place')->nullable();

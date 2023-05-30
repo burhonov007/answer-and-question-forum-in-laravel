@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Answer;
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,8 +14,10 @@ class UserController extends Controller
     {
          $user = auth()->user();
          $answerCount = Answer::where('user_id',$user->id)->count();
+         $commentCount = Comment::where('user_id',$user->id)->count();
          $answers = Answer::where('user_id',$user->id)->paginate(5);
-         return view('profile', compact('user','answerCount','answers'));
+         $comments = Comment::where('user_id',$user->id)->paginate(5);
+         return view('profile', compact('user','answerCount','answers','comments','commentCount'));
     }
 
     public function logout()

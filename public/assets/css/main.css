@@ -1,0 +1,93 @@
+body{
+    background-color: #B1B2FF;
+}
+
+a{
+    text-decoration: none;
+}
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.left-block {
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+
+.right-block {
+    padding: 20px;
+
+}
+
+.fixed-links {
+    margin-left: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    background-image: url("/assets/ava.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.avatar .checkmark {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("/assets/checkmark.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #AAC4FF;
+    padding: 15px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+.fa-link {
+    color: deepskyblue;
+}
+
+.card__body {
+    margin: 0 10px;
+}
+
+.rounded-circle-avatar {
+    max-width: 4%;
+}
+
+.rounded-circle {
+    max-width: 1%;
+}
+
+
+.list-group-item{
+    background-color: #AAC4FF;
+}

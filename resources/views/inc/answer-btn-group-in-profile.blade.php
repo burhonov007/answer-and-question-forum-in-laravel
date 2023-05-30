@@ -18,6 +18,9 @@
         <button type="submit" class="btn {{ $answer->commentByUser(\Auth::id()) ?  'btn-dark' : 'btn-outline-dark' }}  rounded" ><i class="fas fa-comments"></i>
             {{ $answer->commentCount() }}
         </button>
+        <a href="{{ route('show-question', $answer->question_id) }}" type="submit" class="btn btn-outline-primary rounded">
+            Дидани савол
+        </a>
     </form>
 </div>
 
